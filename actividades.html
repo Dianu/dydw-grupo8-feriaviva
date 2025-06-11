@@ -9,10 +9,10 @@
   </head>
   <body>
     <header>
-      <div class="logo-container">
+      <a class="logo-container" href="./index.html">
         <img src="./assets/images/logo.svg" alt="Site Logo" />
         <h1>Feria <span>Viva</span></h1>
-      </div>
+      </a>
       <div class="nav-container">
         <nav class="navbar" id="navbar">
           <ul>
@@ -40,88 +40,86 @@
       </div>
     </header>
     <hr />
-    <main>
-      <main class="actividades">
-        <!-- Banner con imagen decorativa y título -->
-        <section class="banner-actividades">
-          <img src="./assets/images/Pink Green L.png" alt="Banner floral" />
-          <h1>Actividades</h1>
-        </section>
+    <main class="actividades">
+      <!-- Banner con imagen decorativa y título -->
+      <section class="banner">
+        <img src="./assets/images/Pink Green L.png" alt="Banner floral" />
+        <h2>Actividades</h2>
+      </section>
 
-        <!-- Intro -->
-        <section class="intro-actividades container">
-          <h2>Un paseo para aprender, disfrutar y consumir con conciencia</h2>
+      <!-- Intro -->
+      <section class="intro-actividades container">
+        <h2>Un paseo para aprender, disfrutar y consumir con conciencia</h2>
+        <p>
+          Feria Viva es un espacio para aprender, disfrutar y elegir con
+          conciencia. Un lugar donde conviven talleres, charlas, juegos,
+          gastronomía local y un mercado con productos responsables,
+          reutilizados o hechos a mano. Todo en un ambiente relajado y
+          comunitario, pensado para compartir en familia y conectar con un
+          estilo de vida más sustentable.
+        </p>
+      </section>
+
+      <!-- Grilla de actividades -->
+      <section class="grilla-actividades container">
+        <!-- Card 1 -->
+        <article class="actividad">
+          <h3>Stands que inspiran y transforman</h3>
           <p>
-            Feria Viva es un espacio para aprender, disfrutar y elegir con
-            conciencia. Un lugar donde conviven talleres, charlas, juegos,
-            gastronomía local y un mercado con productos responsables,
-            reutilizados o hechos a mano. Todo en un ambiente relajado y
-            comunitario, pensado para compartir en familia y conectar con un
-            estilo de vida más sustentable.
+            En cada ciudad, nuestra feria se llena de color y propósito. Vas a
+            encontrar:
           </p>
-        </section>
+          <ul>
+            <li>Productos orgánicos y locales</li>
+            <li>Ropa ecológica y accesorios reciclados</li>
+            <li>
+              Tecnología sustentable, libros, cosmética natural y mucho más
+            </li>
+          </ul>
+        </article>
+        <figure class="actividad-img">
+          <img
+            src="./assets/images/stand.webp"
+            alt="Stands sustentables con bolsos"
+          />
+        </figure>
 
-        <!-- Grilla de actividades -->
-        <section class="grilla-actividades container">
-          <!-- Card 1 -->
-          <article class="actividad">
-            <h3>Stands que inspiran y transforman</h3>
-            <p>
-              En cada ciudad, nuestra feria se llena de color y propósito. Vas a
-              encontrar:
-            </p>
-            <ul>
-              <li>Productos orgánicos y locales</li>
-              <li>Ropa ecológica y accesorios reciclados</li>
-              <li>
-                Tecnología sustentable, libros, cosmética natural y mucho más
-              </li>
-            </ul>
-          </article>
-          <figure class="actividad-img">
-            <img
-              src="./assets/images/stand.webp"
-              alt="Stands sustentables con bolsos"
-            />
-          </figure>
+        <!-- Card 2 -->
+        <figure class="actividad-img">
+          <img src="./assets/images/reunion.jpg" alt="Charla en ronda" />
+        </figure>
+        <article class="actividad">
+          <h3>Charlas y talleres para todos los públicos</h3>
+          <p>
+            Compartimos conocimiento a través de expertos en prácticas
+            sustentables:
+          </p>
+          <ul>
+            <li>Compostaje</li>
+            <li>Huerta urbana</li>
+            <li>Alimentación consciente</li>
+            <li>Energías limpias</li>
+            <li>Economía circular</li>
+          </ul>
+        </article>
 
-          <!-- Card 2 -->
-          <figure class="actividad-img">
-            <img src="./assets/images/reunion.jpg" alt="Charla en ronda" />
-          </figure>
-          <article class="actividad">
-            <h3>Charlas y talleres para todos los públicos</h3>
-            <p>
-              Compartimos conocimiento a través de expertos en prácticas
-              sustentables:
-            </p>
-            <ul>
-              <li>Compostaje</li>
-              <li>Huerta urbana</li>
-              <li>Alimentación consciente</li>
-              <li>Energías limpias</li>
-              <li>Economía circular</li>
-            </ul>
-          </article>
-
-          <!-- Card 3 -->
-          <article class="actividad">
-            <h3>Espacios para niños y familias</h3>
-            <p>
-              Creamos zonas interactivas para aprender jugando. Propuestas con
-              materiales reciclables, juegos didácticos, actividades de arte y
-              construcción para que los más chicos también se conecten con el
-              cuidado del planeta.
-            </p>
-          </article>
-          <figure class="actividad-img">
-            <img
-              src="./assets/images/niños-2.webp"
-              alt="Niños pintando y jugando al aire libre"
-            />
-          </figure>
-        </section>
-      </main>
+        <!-- Card 3 -->
+        <article class="actividad">
+          <h3>Espacios para niños y familias</h3>
+          <p>
+            Creamos zonas interactivas para aprender jugando. Propuestas con
+            materiales reciclables, juegos didácticos, actividades de arte y
+            construcción para que los más chicos también se conecten con el
+            cuidado del planeta.
+          </p>
+        </article>
+        <figure class="actividad-img">
+          <img
+            src="./assets/images/niños-2.webp"
+            alt="Niños pintando y jugando al aire libre"
+          />
+        </figure>
+      </section>
     </main>
     <footer>
       <div class="footer-container">
