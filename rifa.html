@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./css/style.css" />
+    <script defer src="./js/navbar_responsive.js"></script>
     <title>Feria Viva | Rifa</title>
   </head>
   <body>
@@ -12,19 +13,34 @@
         <img src="./assets/images/logo.svg" alt="Site Logo" />
         <h1>Feria <span>Viva</span></h1>
       </div>
-      <nav>
-        <ul>
-          <li><a href="./index.html">Inicio</a></li>
-          <li><a href="./actividades.html">Actividades</a></li>
-          <li>
-            <a href="./recorrido.html">Nuestro Recorrido</a>
-          </li>
-          <li>
-            <a href="./rifa.html" class="site-button">Participá de la rifa</a>
-          </li>
-        </ul>
-      </nav>
+      <div class="nav-container">
+        <nav class="navbar" id="navbar">
+          <ul>
+            <li><a href="./index.html">Inicio</a></li>
+            <li><a href="./actividades.html">Actividades</a></li>
+            <li>
+              <a href="./recorrido.html">Nuestro Recorrido</a>
+            </li>
+            <li>
+              <a href="./rifa.html" class="site-button">Participá de la rifa</a>
+            </li>
+          </ul>
+        </nav>
+
+        <img
+          class="dark-mode-button"
+          src="./assets/icons/dark_mode_24dp_FFFFFF_FILL0_wght400_GRAD0_opsz24.svg"
+          alt="Dark Mode Button"
+        />
+        <img
+          class="light-mode-button"
+          src="./assets/icons/light_mode_24dp_F89B77_FILL0_wght400_GRAD0_opsz24.svg"
+          alt="Light Mode Button"
+        />
+        <button class="hamburger" id="hamburger">&#9776;</button>
+      </div>
     </header>
+    <hr />
     <main>
       <h1>Participá, ayudá y ganá</h1>
       <p class="intro">
