@@ -29,11 +29,13 @@
         <img
           class="dark-mode-button"
           src="./assets/icons/dark_mode_24dp_FFFFFF_FILL0_wght400_GRAD0_opsz24.svg"
-          alt="Dark Mode Button" />
+          alt="Dark Mode Button"
+        />
         <img
           class="light-mode-button"
           src="./assets/icons/light_mode_24dp_F89B77_FILL0_wght400_GRAD0_opsz24.svg"
-          alt="Light Mode Button" />
+          alt="Light Mode Button"
+        />
         <button class="hamburger" id="hamburger">&#9776;</button>
       </div>
     </header>
@@ -61,60 +63,66 @@
       <!-- Grilla de actividades -->
       <section class="grilla-actividades container">
         <!-- Card 1 -->
-        <article class="actividad">
-          <h3>Stands que inspiran y transforman</h3>
-          <p>
-            En cada ciudad, nuestra feria se llena de color y propósito. Vas a
-            encontrar:
-          </p>
-          <ul>
-            <li>Productos orgánicos y locales</li>
-            <li>Ropa ecológica y accesorios reciclados</li>
-            <li>
-              Tecnología sustentable, libros, cosmética natural y mucho más
-            </li>
-          </ul>
-        </article>
-        <figure class="actividad-img">
-          <img
-            src="./assets/images/stand.webp"
-            alt="Stands sustentables con bolsos" />
-        </figure>
-
+        <div class="card reverse">
+          <article class="actividad">
+            <h3>Stands que inspiran y transforman</h3>
+            <p>
+              En cada ciudad, nuestra feria se llena de color y propósito. Vas a
+              encontrar:
+            </p>
+            <ul>
+              <li>Productos orgánicos y locales</li>
+              <li>Ropa ecológica y accesorios reciclados</li>
+              <li>
+                Tecnología sustentable, libros, cosmética natural y mucho más
+              </li>
+            </ul>
+          </article>
+          <figure class="actividad-img">
+            <img
+              src="./assets/images/stand.webp"
+              alt="Stands sustentables con bolsos"
+            />
+          </figure>
+        </div>
         <!-- Card 2 -->
-        <figure class="actividad-img">
-          <img src="./assets/images/reunion.jpg" alt="Charla en ronda" />
-        </figure>
-        <article class="actividad">
-          <h3>Charlas y talleres para todos los públicos</h3>
-          <p>
-            Compartimos conocimiento a través de expertos en prácticas
-            sustentables:
-          </p>
-          <ul>
-            <li>Compostaje</li>
-            <li>Huerta urbana</li>
-            <li>Alimentación consciente</li>
-            <li>Energías limpias</li>
-            <li>Economía circular</li>
-          </ul>
-        </article>
-
+        <div class="card">
+          <figure class="actividad-img">
+            <img src="./assets/images/reunion.jpg" alt="Charla en ronda" />
+          </figure>
+          <article class="actividad">
+            <h3>Charlas y talleres para todos los públicos</h3>
+            <p>
+              Compartimos conocimiento a través de expertos en prácticas
+              sustentables:
+            </p>
+            <ul>
+              <li>Compostaje</li>
+              <li>Huerta urbana</li>
+              <li>Alimentación consciente</li>
+              <li>Energías limpias</li>
+              <li>Economía circular</li>
+            </ul>
+          </article>
+        </div>
         <!-- Card 3 -->
-        <article class="actividad">
-          <h3>Espacios para niños y familias</h3>
-          <p>
-            Creamos zonas interactivas para aprender jugando. Propuestas con
-            materiales reciclables, juegos didácticos, actividades de arte y
-            construcción para que los más chicos también se conecten con el
-            cuidado del planeta.
-          </p>
-        </article>
-        <figure class="actividad-img">
-          <img
-            src="./assets/images/niños-2.webp"
-            alt="Niños pintando y jugando al aire libre" />
-        </figure>
+        <div class="card reverse">
+          <article class="actividad">
+            <h3>Espacios para niños y familias</h3>
+            <p>
+              Creamos zonas interactivas para aprender jugando. Propuestas con
+              materiales reciclables, juegos didácticos, actividades de arte y
+              construcción para que los más chicos también se conecten con el
+              cuidado del planeta.
+            </p>
+          </article>
+          <figure class="actividad-img">
+            <img
+              src="./assets/images/niños-2.webp"
+              alt="Niños pintando y jugando al aire libre"
+            />
+          </figure>
+        </div>
       </section>
     </main>
     <footer>
@@ -126,27 +134,40 @@
         <div class="footer-column">
           <h4>Contacto</h4>
           <ul>
-            <li><span class="icon-phone"></span><a
-                href="https://wa.me/541130303030" target="_blank">+54 11
-                30303030</a> </li>
-            <li><span class="icon-mail"></span><a
-                href="mailto:feriaviva@mail.com.ar">feriaviva@mail.com.ar</a>
+            <li>
+              <span class="icon-phone"></span
+              ><a href="https://wa.me/541130303030" target="_blank"
+                >+54 11 30303030</a
+              >
             </li>
-            <li><span class="icon-instagram"></span><a
-                href="https://www.instagram.com/feriaviva.ok/"
-                target="_blank">@feriaviva.ok</a></li>
+            <li>
+              <span class="icon-mail"></span
+              ><a href="mailto:feriaviva@mail.com.ar">feriaviva@mail.com.ar</a>
+            </li>
+            <li>
+              <span class="icon-instagram"></span
+              ><a href="https://www.instagram.com/feriaviva.ok/" target="_blank"
+                >@feriaviva.ok</a
+              >
+            </li>
           </ul>
         </div>
 
         <div class="footer-column">
           <h4>Sobre la Feria</h4>
           <ul>
-            <li><span class="icon-activity"></span><a
-                href="./actividades.html">Actividades</a> </li>
-            <li><span class="icon-map"></span><a href="./recorrido.html">
-                Nuestro Recorrido</a></li>
-            <li><span class="icon-faq"></span><a href="./faqs.html">Preguntas
-                Frecuentes</a> </li>
+            <li>
+              <span class="icon-activity"></span
+              ><a href="./actividades.html">Actividades</a>
+            </li>
+            <li>
+              <span class="icon-map"></span
+              ><a href="./recorrido.html"> Nuestro Recorrido</a>
+            </li>
+            <li>
+              <span class="icon-faq"></span
+              ><a href="./faqs.html">Preguntas Frecuentes</a>
+            </li>
           </ul>
         </div>
       </div>
