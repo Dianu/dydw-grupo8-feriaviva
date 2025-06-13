@@ -11,7 +11,7 @@
     <header>
       <a class="logo-container" href="#">
         <img src="./assets/images/logo.svg" alt="Site Logo" />
-        <h1>Feria <span>Viva</span></h1>
+        <h1>Feria <span class="orange-text">Viva</span></h1>
       </a>
       <div class="nav-container">
         <nav class="navbar" id="navbar">
@@ -29,22 +29,24 @@
         <img
           class="dark-mode-button"
           src="./assets/icons/dark_mode_24dp_FFFFFF_FILL0_wght400_GRAD0_opsz24.svg"
-          alt="Dark Mode Button" />
+          alt="Dark Mode Button"
+        />
         <img
           class="light-mode-button"
           src="./assets/icons/light_mode_24dp_F89B77_FILL0_wght400_GRAD0_opsz24.svg"
-          alt="Light Mode Button" />
+          alt="Light Mode Button"
+        />
         <button class="hamburger" id="hamburger">&#9776;</button>
       </div>
     </header>
     <hr />
     <main>
-      <section class="banner">
+      <section class="banner main-banner">
         <img src="./assets/images/feria.webp" alt />
         <h1>Feria Viva</h1>
         <p>Sustentabilidad en movimiento</p>
       </section>
-      <section>
+      <section class="features-section">
         <h2>Un encuentro con lo natural, lo justo y lo posible</h2>
         <p>
           Un espacio donde las buenas ideas se comparten, los productos tienen
@@ -61,8 +63,10 @@
             </p>
           </article>
           <article>
-            <img src="./assets/images/stand-3.webp"
-              alt="Macetas pintadas a mano" />
+            <img
+              src="./assets/images/stand-3.webp"
+              alt="Macetas pintadas a mano"
+            />
             <h3>Mercado Sustentable</h3>
             <p>
               Una gran feria de productos hechos con conciencia. Desde alimentos
@@ -79,15 +83,24 @@
             </p>
           </article>
         </div>
-        <a href>Descubrí más sobre nuestras actividades ></a>
+        <a href="./actividades.html"
+          >Descubrí más sobre nuestras actividades ></a
+        >
       </section>
-      <section class="banner">
-        <img src="./assets/images/Pink Green L.png" alt="Banner colorido" />
+      <section class="banner secondary-banner">
+        <img
+          src="./assets/images/Green Abstract Background Square Pillow (1).png"
+          alt="Banner colorido"
+        />
         <h2>
-          Recorremos distintas ciudades llevando una propuesta viva,
-          colaborativa y amigable con el ambiente
+          Recorremos distintas ciudades llevando una propuesta
+          <span class="orange-text">viva</span>,
+          <span class="purple-text">colaborativa</span> y
+          <span class="orange-text">amigable</span> con el ambiente
         </h2>
-        <a class="site-button">Descubrí nuestro próximo destino</a>
+        <a class="site-button" href="./recorrido.html"
+          >Descubrí nuestro próximo destino</a
+        >
       </section>
       <section class="contact-section">
         <div>
@@ -95,22 +108,30 @@
           <p>¿Tenés un emprendimiento sustentable?</p>
           <p>¿Querés ayudar como voluntario?</p>
         </div>
-        <form class="contact-form">
-          <label for>Nombre</label>
-          <input type="text" placeholder="Nombre" required />
-          <label for>Apellido</label>
-          <input type="text" placeholder="Apellido" />
-          <label for>Email</label>
-          <input type="email" placeholder="Email" required />
-          <label for>Asunto</label>
-          <input type="text" placeholder="Asunto" />
-          <label for>Mensaje</label>
-          <textarea
-            name
-            id
-            cols="30"
-            rows="4"
-            placeholder="Mensaje..."></textarea>
+
+        <form class="form">
+          <div class="row">
+            <div class="field-group">
+              <label for="nombre">Nombre</label>
+              <input type="text" id="nombre" placeholder="Nombre" />
+            </div>
+            <div class="field-group">
+              <label for="apellido">Apellido</label>
+              <input type="text" id="apellido" placeholder="Apellido" />
+            </div>
+          </div>
+          <div class="field-group">
+            <label for="mail">Email</label>
+            <input type="email" id="mail" placeholder="Email" />
+          </div>
+          <div class="field-group">
+            <label for="asunto">Asunto</label>
+            <input type="text" id="asunto" placeholder="Asunto" />
+          </div>
+          <div class="field-group">
+            <label for="mensaje">Mensaje</label>
+            <textarea id="mensaje" placeholder="Mensaje..."></textarea>
+          </div>
         </form>
       </section>
     </main>
@@ -123,27 +144,40 @@
         <div class="footer-column">
           <h4>Contacto</h4>
           <ul>
-            <li><span class="icon-phone"></span><a
-                href="https://wa.me/541130303030" target="_blank">+54 11
-                30303030</a> </li>
-            <li><span class="icon-mail"></span><a
-                href="mailto:feriaviva@mail.com.ar">feriaviva@mail.com.ar</a>
+            <li>
+              <span class="icon-phone"></span
+              ><a href="https://wa.me/541130303030" target="_blank"
+                >+54 11 30303030</a
+              >
             </li>
-            <li><span class="icon-instagram"></span><a
-                href="https://www.instagram.com/feriaviva.ok/"
-                target="_blank">@feriaviva.ok</a></li>
+            <li>
+              <span class="icon-mail"></span
+              ><a href="mailto:feriaviva@mail.com.ar">feriaviva@mail.com.ar</a>
+            </li>
+            <li>
+              <span class="icon-instagram"></span
+              ><a href="https://www.instagram.com/feriaviva.ok/" target="_blank"
+                >@feriaviva.ok</a
+              >
+            </li>
           </ul>
         </div>
 
         <div class="footer-column">
           <h4>Sobre la Feria</h4>
           <ul>
-            <li><span class="icon-activity"></span><a
-                href="./actividades.html">Actividades</a> </li>
-            <li><span class="icon-map"></span><a href="./recorrido.html">
-                Nuestro Recorrido</a></li>
-            <li><span class="icon-faq"></span><a href="./faqs.html">Preguntas
-                Frecuentes</a> </li>
+            <li>
+              <span class="icon-activity"></span
+              ><a href="./actividades.html">Actividades</a>
+            </li>
+            <li>
+              <span class="icon-map"></span
+              ><a href="./recorrido.html"> Nuestro Recorrido</a>
+            </li>
+            <li>
+              <span class="icon-faq"></span
+              ><a href="./faqs.html">Preguntas Frecuentes</a>
+            </li>
           </ul>
         </div>
       </div>
