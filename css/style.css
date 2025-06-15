@@ -224,6 +224,11 @@ main {
     max-width: 600px;
   }
 }
+@media (min-width: 992px) {
+  .banner {
+    height: 40vh;
+  }
+}
 
 .contact-section {
   display: flex;
@@ -455,4 +460,76 @@ footer {
 }
 
 @media (max-width: 480px) {
+}
+
+/********* MODO OSCURO *********/
+body.modo-oscuro {
+  background-color: #082628;
+  color: #e9f4ef;
+}
+
+/* HEADER */
+body.modo-oscuro header {
+  background-color: var(--light-green);
+}
+
+/* NAV */
+body.modo-oscuro .navbar a {
+  color: #0e1a17;
+}
+
+body.modo-oscuro .site-button {
+  background-color: var(--dark-green);
+  color: var(--white) !important;
+}
+
+/* FOOTER */
+body.modo-oscuro footer,
+body.modo-oscuro footer p {
+  background-color: var(--light-green);
+  color: #000;
+}
+
+body.modo-oscuro .footer-column a {
+  color: #000;
+}
+
+/* FORMULARIO */
+body.modo-oscuro .form input,
+body.modo-oscuro .form textarea {
+  background-color: #eaf8d7;
+  color: #0e1a17;
+}
+
+/* CARDS y FEATURES */
+body.modo-oscuro .card {
+  background-color: #156064;
+  color: #e9f4ef;
+  border-radius: 10px;
+}
+
+body.modo-oscuro .main-banner h1,
+body.modo-oscuro .main-banner p, 
+body.modo-oscuro h2,
+body.modo-oscuro .card h3,
+body.modo-oscuro p,
+body.modo-oscuro label,
+body.modo-oscuro a
+{
+  color: var(--white);
+}
+
+body.modo-oscuro .banner.secondary-banner h2,
+body.modo-oscuro .banner h2{
+  color: var(--dark-green);
+}
+
+/* BOTONES de MODO */
+body.modo-oscuro .dark-mode-button {
+  display: none;
+}
+body.modo-oscuro .light-mode-button {
+  display: inline-block;
+  background-color: #fff;
+  border-radius: 50%;
 }
