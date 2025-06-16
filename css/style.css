@@ -176,6 +176,10 @@ main {
   }
 }
 
+.titulo-y-texto {
+  padding: 20px 0;
+}
+
 .titulo-y-texto,
 .titulo-y-texto p {
   text-align: center;
@@ -308,7 +312,7 @@ input[type="submit"] {
 .grilla-actividades {
   padding-top: 20px;
 
-  .card {
+  .actividadades-card {
     display: flex;
     flex-direction: row;
     gap: 20px;
@@ -439,7 +443,8 @@ footer {
 }
 
 /********* MODO OSCURO *********/
-body.modo-oscuro {
+body.modo-oscuro,
+body.modo-oscuro .actividadades-card {
   background-color: #082628;
   color: #e9f4ef;
 }
@@ -488,7 +493,8 @@ body.modo-oscuro .form input[type="submit"] {
 }
 
 /* CARDS y FEATURES */
-body.modo-oscuro .card {
+body.modo-oscuro .card,
+body.modo-oscuro .actividad {
   background-color: #156064;
   color: #e9f4ef;
   border-radius: 10px;
@@ -498,6 +504,7 @@ body.modo-oscuro .main-banner h1,
 body.modo-oscuro .main-banner p,
 body.modo-oscuro h2,
 body.modo-oscuro .card h3,
+body.modo-oscuro .actividadades-card h3,
 body.modo-oscuro p,
 body.modo-oscuro label,
 body.modo-oscuro a {
@@ -528,12 +535,23 @@ body.modo-oscuro .light-mode-button {
 @media (max-width: 850px) {
   .galeria-destinos {
     grid-template-columns: 1fr 1fr 1fr;
-    /* align-items: self-start; */
   }
 }
 
 /* Ancho para tablets */
 @media (max-width: 768px) {
+  /* DARK MODE */
+  body.modo-oscuro .actividadades-card {
+    background-color: var(--dark-green);
+  }
+
+  body.modo-oscuro .navbar {
+    background-color: #0e1a17;
+    a {
+      color: white;
+    }
+  }
+
   .navbar {
     display: none;
   }
@@ -636,7 +654,7 @@ body.modo-oscuro .light-mode-button {
     justify-content: center;
     gap: 20px;
 
-    .card {
+    .actividadades-card {
       display: flex;
       flex-direction: column;
       gap: 0;
