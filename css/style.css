@@ -176,6 +176,11 @@ main {
   }
 }
 
+.titulo-y-texto,
+.titulo-y-texto p {
+  text-align: center;
+}
+
 .features-section {
   padding: 20px 0;
   a {
@@ -275,6 +280,21 @@ main {
   gap: 16px;
 }
 
+input[type="submit"] {
+  background-color: var(--dark-green);
+  color: var(--white);
+  font-weight: 600;
+  border: none;
+  padding: 12px 18px;
+  border-radius: 20px;
+  cursor: pointer;
+
+  &:hover {
+    background-color: #2b4f4a;
+    transition: background-color 0.3s ease-in-out;
+  }
+}
+
 /* --- ACTIVIDADES.HTML --- */
 .intro-actividades {
   padding: 20px 0;
@@ -317,22 +337,45 @@ main {
 }
 
 /* ------- RECORRIDO.HTML -------- */
+.galeria-destinos {
+  padding: 20px 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, 250px);
+  justify-content: space-around;
+  gap: 20px;
+
+  > div {
+    img {
+      width: 100%;
+      aspect-ratio: 1 / 1;
+      object-fit: cover;
+      border-radius: 20px;
+      display: block;
+    }
+
+    p {
+      padding-top: 10px;
+      text-align: center;
+      font-weight: 600;
+    }
+  }
+}
+
 .calendario {
   padding: 40px 0;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   justify-content: center;
   width: 100%;
-  /* margin: 0 auto; */
+
   gap: 16px 24px;
 }
 
 .tarjeta-fecha {
   display: flex;
-  /* max-width: 300px; */
+
   border-radius: 12px;
   overflow: hidden;
-  /* width: 100%; */
 }
 
 .datos-fecha,
@@ -349,7 +392,6 @@ main {
   padding: 10px 20px;
 
   span {
-    /* font-size: 1.5rem; */
     font-weight: 600;
   }
 }
@@ -359,6 +401,19 @@ main {
   background-color: var(--light-purple);
   color: var(--dark-green);
   padding: 10px 20px;
+}
+
+.mapa-container {
+  border-radius: 20px;
+  height: 350px;
+  overflow: hidden;
+
+  img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+  }
 }
 
 footer {
@@ -414,6 +469,16 @@ body.modo-oscuro .form textarea {
   color: #0e1a17;
 }
 
+body.modo-oscuro .form input[type="submit"] {
+  background-color: var(--dark-green);
+  color: var(--white);
+
+  &:hover {
+    background-color: #2b4f4a;
+    transition: background-color 0.3s ease-in-out;
+  }
+}
+
 /* CARDS y FEATURES */
 body.modo-oscuro .card {
   background-color: #156064;
@@ -449,6 +514,13 @@ body.modo-oscuro .light-mode-button {
 @media (min-width: 992px) {
   .banner {
     height: 40vh;
+  }
+}
+
+@media (max-width: 850px) {
+  .galeria-destinos {
+    grid-template-columns: 1fr 1fr 1fr;
+    /* align-items: self-start; */
   }
 }
 
@@ -546,6 +618,7 @@ body.modo-oscuro .light-mode-button {
   .intro-actividades {
     text-align: center;
   }
+
   .grilla-actividades {
     grid-template-columns: 1fr;
     justify-content: center;
@@ -589,6 +662,7 @@ body.modo-oscuro .light-mode-button {
   }
 
   /* RECORRIDO.HTML */
+
   .calendario {
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
   }
@@ -606,5 +680,9 @@ body.modo-oscuro .light-mode-button {
 @media (max-width: 480px) {
   .form {
     width: 100%;
+  }
+
+  .galeria-destinos {
+    grid-template-columns: 1fr 1fr;
   }
 }
