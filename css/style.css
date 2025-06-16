@@ -74,6 +74,12 @@ main {
       color: var(--orange);
     }
   }
+
+  > span {
+    font-weight: 600;
+    color: var(--dark-green);
+    font-size: 1.2rem;
+  }
 }
 
 header {
@@ -452,6 +458,10 @@ body.modo-oscuro .actividadades-card {
 /* HEADER */
 body.modo-oscuro header {
   background-color: var(--light-green);
+}
+
+body.modo-oscuro > hr {
+  display: none;
 }
 
 /* NAV */
