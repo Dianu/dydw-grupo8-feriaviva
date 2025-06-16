@@ -6,6 +6,7 @@
     <link rel="stylesheet" href="./css/style.css" />
     <script defer src="./js/navbar_responsive.js"></script>
     <script defer src="./js/modo.js"></script>
+    <script defer src="./js/form.js"></script>
     <title>Feria Viva</title>
   </head>
   <body>
@@ -30,13 +31,11 @@
         <img
           class="dark-mode-button"
           src="./assets/icons/dark_mode_24dp_FFFFFF_FILL0_wght400_GRAD0_opsz24.svg"
-          alt="Dark Mode Button"
-        />
+          alt="Dark Mode Button" />
         <img
           class="light-mode-button"
           src="./assets/icons/light_mode_24dp_F89B77_FILL0_wght400_GRAD0_opsz24.svg"
-          alt="Light Mode Button"
-        />
+          alt="Light Mode Button" />
         <button class="hamburger" id="hamburger">&#9776;</button>
       </div>
     </header>
@@ -66,8 +65,7 @@
           <article class="card">
             <img
               src="./assets/images/stand-3.webp"
-              alt="Macetas pintadas a mano"
-            />
+              alt="Macetas pintadas a mano" />
             <h3>Mercado Sustentable</h3>
             <p>
               Una gran feria de productos hechos con conciencia. Desde alimentos
@@ -84,24 +82,21 @@
             </p>
           </article>
         </div>
-        <a href="./actividades.html"
-          >Descubrí más sobre nuestras actividades ></a
-        >
+        <a href="./actividades.html">Descubrí más sobre nuestras actividades
+          ></a>
       </section>
       <section class="banner secondary-banner">
         <img
           src="./assets/images/Green Abstract Background Square Pillow (1).png"
-          alt="Banner colorido"
-        />
+          alt="Banner colorido" />
         <h2>
           Recorremos distintas ciudades llevando una propuesta
           <span class="orange-text">viva</span>,
           <span class="purple-text">colaborativa</span> y
           <span class="orange-text">amigable</span> con el ambiente
         </h2>
-        <a class="site-button" href="./recorrido.html"
-          >Descubrí nuestro próximo destino</a
-        >
+        <a class="site-button" href="./recorrido.html">Descubrí nuestro próximo
+          destino</a>
       </section>
       <section class="contact-section">
         <div>
@@ -123,7 +118,7 @@
           </div>
           <div class="field-group">
             <label for="mail">Email</label>
-            <input type="email" id="mail" placeholder="Email" />
+            <input type="text" id="mail" placeholder="Email" />
           </div>
           <div class="field-group">
             <label for="asunto">Asunto</label>
@@ -147,20 +142,18 @@
           <h4>Contacto</h4>
           <ul>
             <li>
-              <span class="icon-phone"></span
-              ><a href="https://wa.me/541130303030" target="_blank"
-                >+54 11 30303030</a
-              >
+              <span class="icon-phone"></span><a
+                href="https://wa.me/541130303030" target="_blank">+54 11
+                30303030</a>
             </li>
             <li>
-              <span class="icon-mail"></span
-              ><a href="mailto:feriaviva@mail.com.ar">feriaviva@mail.com.ar</a>
+              <span class="icon-mail"></span><a
+                href="mailto:feriaviva@mail.com.ar">feriaviva@mail.com.ar</a>
             </li>
             <li>
-              <span class="icon-instagram"></span
-              ><a href="https://www.instagram.com/feriaviva.ok/" target="_blank"
-                >@feriaviva.ok</a
-              >
+              <span class="icon-instagram"></span><a
+                href="https://www.instagram.com/feriaviva.ok/"
+                target="_blank">@feriaviva.ok</a>
             </li>
           </ul>
         </div>
@@ -169,16 +162,16 @@
           <h4>Sobre la Feria</h4>
           <ul>
             <li>
-              <span class="icon-activity"></span
-              ><a href="./actividades.html">Actividades</a>
+              <span class="icon-activity"></span><a
+                href="./actividades.html">Actividades</a>
             </li>
             <li>
-              <span class="icon-map"></span
-              ><a href="./recorrido.html"> Nuestro Recorrido</a>
+              <span class="icon-map"></span><a href="./recorrido.html"> Nuestro
+                Recorrido</a>
             </li>
             <li>
-              <span class="icon-faq"></span
-              ><a href="./faqs.html">Preguntas Frecuentes</a>
+              <span class="icon-faq"></span><a href="./faqs.html">Preguntas
+                Frecuentes</a>
             </li>
           </ul>
         </div>
@@ -191,5 +184,34 @@
         </p>
       </div>
     </footer>
+    <!-- Modal de Error -->
+    <div id="modal-error" class="modal" style="display: none;">
+      <div class="modal-content error">
+        <div class="modal-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" height="48" width="48"
+            fill="#f89b77" viewBox="0 0 48 48">
+            <path
+              d="M24 4a20 20 0 1 0 .001 40.001A20 20 0 0 0 24 4Zm6.05 26.05-2.1 2.1L24 26.1l-3.95 3.95-2.1-2.1L21.9 24l-3.95-3.95 2.1-2.1L24 21.9l3.95-3.95 2.1 2.1L26.1 24l3.95 3.95Z" />
+          </svg>
+        </div>
+        <div id="modal-error-text" class="modal-text"></div>
+        <button onclick="cerrarModal('modal-error')">Cerrar</button>
+      </div>
+    </div>
+
+    <!-- Modal de Éxito -->
+    <div id="modal-exito" class="modal" style="display: none;">
+      <div class="modal-content success">
+        <div class="modal-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" height="48" width="48"
+            viewBox="0 0 48 48" fill="#156064">
+            <path
+              d="M24 4a20 20 0 1 0 0 40 20 20 0 0 0 0-40Zm-2.25 26.3L14.7 23.25l2.1-2.1 4.95 4.95 9.45-9.45 2.1 2.1Z" />
+          </svg>
+        </div>
+        <div class="modal-text">¡El formulario fue enviado con éxito!</div>
+        <button onclick="cerrarModal('modal-exito')">Cerrar</button>
+      </div>
+    </div>
   </body>
 </html>
