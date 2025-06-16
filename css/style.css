@@ -316,6 +316,51 @@ main {
   }
 }
 
+/* ------- RECORRIDO.HTML -------- */
+.calendario {
+  padding: 40px 0;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  justify-content: center;
+  width: 100%;
+  /* margin: 0 auto; */
+  gap: 16px 24px;
+}
+
+.tarjeta-fecha {
+  display: flex;
+  /* max-width: 300px; */
+  border-radius: 12px;
+  overflow: hidden;
+  /* width: 100%; */
+}
+
+.datos-fecha,
+.info-evento {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.datos-fecha {
+  background-color: var(--dark-green);
+  color: var(--white);
+  padding: 10px 20px;
+
+  span {
+    /* font-size: 1.5rem; */
+    font-weight: 600;
+  }
+}
+
+.info-evento {
+  width: 100%;
+  background-color: var(--light-purple);
+  color: var(--dark-green);
+  padding: 10px 20px;
+}
+
 footer {
   background-color: var(--light-green);
   padding: 20px 20px 0px 20px;
@@ -541,6 +586,15 @@ body.modo-oscuro .light-mode-button {
       display: flex;
       flex-direction: column-reverse;
     }
+  }
+
+  /* RECORRIDO.HTML */
+  .calendario {
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  }
+
+  .datos-fecha {
+    width: 25%;
   }
 
   .footer-container {
