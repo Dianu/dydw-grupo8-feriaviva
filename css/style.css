@@ -170,7 +170,6 @@ main {
 
 .main-banner {
   height: 30vh;
-  color: var(--white);
 
   img {
     filter: brightness(0.7);
@@ -178,6 +177,7 @@ main {
 
   h2,
   p {
+    color: var(--white);
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
   }
 }
@@ -510,7 +510,7 @@ body.modo-oscuro .actividad {
   border-radius: 10px;
 }
 
-body.modo-oscuro .main-banner h1,
+body.modo-oscuro .main-banner h2,
 body.modo-oscuro .main-banner p,
 body.modo-oscuro h2,
 body.modo-oscuro .card h3,
