@@ -26,16 +26,40 @@ body {
   line-height: 1.6;
 }
 
+h2 {
+  font-size: 34px;
+  font-weight: 600;
+  text-align: center;
+}
+
+h3 {
+  font-size: 28px;
+  font-weight: 600;
+}
+
+h4 {
+  font-size: 20px;
+  font-weight: 600;
+  text-decoration: underline;
+  text-decoration-color: var(--orange);
+  text-underline-offset: 5px;
+}
+
 h2,
 h3,
 h4 {
   color: var(--dark-green);
 }
 
-h2,
-h3 {
+h3,
+h4 {
   margin: 16px 0;
   text-align: center;
+}
+
+p {
+  font-size: 17px;
+  font-weight: 400;
 }
 
 a {
@@ -55,12 +79,12 @@ a {
 }
 
 .purple-bg {
-  background-color: var(--purple);
+  background-color: var(--light-purple);
 }
 
 header,
 main {
-  padding: 20px;
+  padding: 20px 40px;
 }
 
 .logo-container {
@@ -159,7 +183,7 @@ main {
 
 .banner {
   position: relative;
-  height: 25vh;
+  height: 30vh;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -178,15 +202,35 @@ main {
 
 .main-banner {
   height: 30vh;
+  position: relative;
 
-  img {
-    filter: brightness(0.7);
+  &::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-color: #0e3133;
+    z-index: -5;
+    opacity: 0.5;
   }
 
-  h1,
+  img {
+    position: absolute;
+    z-index: -10;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  p {
+    font-size: 24px;
+    font-weight: 500;
+  }
+
+  h2,
   p {
     color: var(--white);
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+    text-align: center;
   }
 }
 
@@ -201,6 +245,7 @@ main {
 
 .features-section {
   padding: 20px 0;
+  text-align: center;
 
   a {
     display: block;
@@ -220,17 +265,16 @@ main {
 .cards {
   padding: 20px 0;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 20px;
 
   article {
     background-color: var(--light-gray);
     border-radius: 20px;
-    padding: 10px;
+    padding: 20px;
 
     p {
       margin-bottom: 15px;
-      font-size: 14px;
       line-height: 1.5;
     }
 
@@ -244,7 +288,7 @@ main {
 }
 
 .banner.secondary-banner {
-  h2 {
+  h3 {
     max-width: 600px;
   }
 }
@@ -262,6 +306,7 @@ main {
 
   p {
     color: var(--dark-green);
+    font-size: 20px;
   }
 }
 
@@ -322,6 +367,7 @@ input[type="submit"] {
 /* --- ACTIVIDADES.HTML --- */
 .intro-actividades {
   padding: 20px 0;
+  text-align: center;
 }
 
 .grilla-actividades {
@@ -466,9 +512,10 @@ input[type="submit"] {
 }
 
 .info-panel {
-  padding: 15px 10px;
+  padding: 25px;
   border-radius: 10px;
   border: none;
+  font-size: 16px;
 }
 
 .info-boxes {
@@ -486,14 +533,22 @@ input[type="submit"] {
   background-color: var(--light-gray);
   border-radius: 20px;
   padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 
   h3 {
     margin-top: 0;
   }
 
+  ul {
+    max-width: fit-content;
+  }
+
   li {
     list-style-type: disc;
     margin-left: 20px;
+    width: fit-content;
   }
 }
 
@@ -541,10 +596,16 @@ footer {
 
 .footer-bottom {
   padding: 20px 0;
+  p {
+    font-size: 14px;
+  }
 }
 
-.footer-column h4 {
+.footer-column h5 {
   margin-bottom: 15px;
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--dark-green);
 }
 
 .footer-column ul li {
@@ -563,19 +624,20 @@ footer {
   text-align: center;
 }
 
-body.modo-oscuro .footer-column ul li i {
-  color: var(--white);
-}
-
-body.modo-oscuro .footer-column ul li img.footer-icon {
-  filter: brightness(0) invert(1);
-}
-
 /********* MODO OSCURO *********/
 body.modo-oscuro,
 body.modo-oscuro .actividadades-card {
   background-color: #082628;
   color: #e9f4ef;
+}
+
+body.modo-oscuro h3,
+body.modo-oscuro h4 {
+  color: var(--white);
+}
+
+body.modo-oscuro .secondary-banner h3 {
+  color: var(--dark-green);
 }
 
 /* HEADER */
@@ -626,7 +688,16 @@ body.modo-oscuro .form input[type="submit"] {
 }
 
 body.modo-oscuro .rifa-form-section {
+  background-color: var(--dark-green);
+}
+
+body.modo-oscuro .rifa-form-section input[type="submit"] {
   background-color: #0e1a17;
+  color: var(--white);
+}
+
+body.modo-oscuro .rifa-form-section span {
+  color: var(--white);
 }
 
 /* CARDS y FEATURES */
@@ -690,6 +761,28 @@ body.modo-oscuro .light-mode-button {
 /* Ancho para tablets */
 @media (max-width: 768px) {
   /* DARK MODE */
+
+  main {
+    padding: 20px;
+  }
+  h2 {
+    font-size: 26px;
+  }
+
+  h3 {
+    font-size: 24px;
+  }
+
+  p {
+    font-size: 16px;
+  }
+
+  .main-banner {
+    p {
+      font-size: 18px;
+    }
+  }
+
   body.modo-oscuro .actividadades-card {
     background-color: var(--dark-green);
   }
@@ -778,6 +871,10 @@ body.modo-oscuro .light-mode-button {
     gap: 20px;
   }
 
+  .contact-section p {
+    text-align: center;
+  }
+
   .form,
   .contact-section h2,
   .contact-section p {
@@ -822,7 +919,6 @@ body.modo-oscuro .light-mode-button {
 
       p {
         margin-bottom: 15px;
-        font-size: 14px;
         line-height: 1.5;
       }
 
@@ -861,6 +957,10 @@ body.modo-oscuro .light-mode-button {
     button {
       width: 100%;
     }
+  }
+
+  .info-boxes .feature-card {
+    min-width: 100%;
   }
 
   .payment-methods {
