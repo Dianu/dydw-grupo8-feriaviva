@@ -392,7 +392,6 @@ input[type="submit"] {
 
 .tarjeta-fecha {
   display: flex;
-
   border-radius: 12px;
   overflow: hidden;
 }
@@ -409,10 +408,8 @@ input[type="submit"] {
   background-color: var(--dark-green);
   color: var(--white);
   padding: 10px 20px;
-
-  span {
-    font-weight: 600;
-  }
+  min-width: 120px;
+  text-align: center;
 }
 
 .info-evento {
@@ -420,6 +417,17 @@ input[type="submit"] {
   background-color: var(--light-purple);
   color: var(--dark-green);
   padding: 10px 20px;
+  text-align: left;
+}
+
+.info-evento span:first-child {
+  font-weight: 600;
+  margin-bottom: 5px;
+}
+
+.info-evento span {
+  display: block;
+  text-align: left;
 }
 
 .mapa-container {
