@@ -26,16 +26,36 @@ body {
   line-height: 1.6;
 }
 
+h2 {
+  font-size: 34px;
+  font-weight: 600;
+}
+
+h3 {
+  font-size: 28px;
+  font-weight: 600;
+}
+
+h4 {
+  font-size: 20px;
+  font-weight: 600;
+}
+
 h2,
 h3,
 h4 {
   color: var(--dark-green);
 }
 
-h2,
-h3 {
+h3,
+h4 {
   margin: 16px 0;
   text-align: center;
+}
+
+p {
+  font-size: 17px;
+  font-weight: 400;
 }
 
 a {
@@ -55,12 +75,12 @@ a {
 }
 
 .purple-bg {
-  background-color: var(--purple);
+  background-color: var(--light-purple);
 }
 
 header,
 main {
-  padding: 20px;
+  padding: 20px 40px;
 }
 
 .logo-container {
@@ -159,7 +179,7 @@ main {
 
 .banner {
   position: relative;
-  height: 25vh;
+  height: 30vh;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -178,15 +198,35 @@ main {
 
 .main-banner {
   height: 30vh;
+  position: relative;
 
-  img {
-    filter: brightness(0.7);
+  &::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-color: #0e3133;
+    z-index: -5;
+    opacity: 0.5;
   }
 
-  h1,
+  img {
+    position: absolute;
+    z-index: -10;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  p {
+    font-size: 24px;
+    font-weight: 500;
+  }
+
+  h2,
   p {
     color: var(--white);
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+    text-align: center;
   }
 }
 
@@ -201,6 +241,7 @@ main {
 
 .features-section {
   padding: 20px 0;
+  text-align: center;
 
   a {
     display: block;
@@ -230,7 +271,6 @@ main {
 
     p {
       margin-bottom: 15px;
-      font-size: 14px;
       line-height: 1.5;
     }
 
@@ -244,7 +284,7 @@ main {
 }
 
 .banner.secondary-banner {
-  h2 {
+  h3 {
     max-width: 600px;
   }
 }
@@ -322,6 +362,7 @@ input[type="submit"] {
 /* --- ACTIVIDADES.HTML --- */
 .intro-actividades {
   padding: 20px 0;
+  text-align: center;
 }
 
 .grilla-actividades {
@@ -541,10 +582,16 @@ footer {
 
 .footer-bottom {
   padding: 20px 0;
+  p {
+    font-size: 14px;
+  }
 }
 
-.footer-column h4 {
+.footer-column h5 {
   margin-bottom: 15px;
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--dark-green);
 }
 
 .footer-column ul li {
@@ -690,6 +737,11 @@ body.modo-oscuro .light-mode-button {
 /* Ancho para tablets */
 @media (max-width: 768px) {
   /* DARK MODE */
+
+  p {
+    font-size: 16px;
+  }
+
   body.modo-oscuro .actividadades-card {
     background-color: var(--dark-green);
   }
@@ -822,7 +874,6 @@ body.modo-oscuro .light-mode-button {
 
       p {
         margin-bottom: 15px;
-        font-size: 14px;
         line-height: 1.5;
       }
 
