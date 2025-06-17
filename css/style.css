@@ -271,7 +271,7 @@ main {
   article {
     background-color: var(--light-gray);
     border-radius: 20px;
-    padding: 10px;
+    padding: 20px;
 
     p {
       margin-bottom: 15px;
@@ -306,6 +306,7 @@ main {
 
   p {
     color: var(--dark-green);
+    font-size: 20px;
   }
 }
 
@@ -858,6 +859,10 @@ body.modo-oscuro .light-mode-button {
     justify-content: center;
     margin: 0 auto;
     gap: 20px;
+  }
+
+  .contact-section p {
+    text-align: center;
   }
 
   .form,
