@@ -39,6 +39,9 @@ h3 {
 h4 {
   font-size: 20px;
   font-weight: 600;
+  text-decoration: underline;
+  text-decoration-color: var(--orange);
+  text-underline-offset: 5px;
 }
 
 h2,
