@@ -29,6 +29,7 @@ body {
 h2 {
   font-size: 34px;
   font-weight: 600;
+  text-align: center;
 }
 
 h3 {
@@ -510,9 +511,10 @@ input[type="submit"] {
 }
 
 .info-panel {
-  padding: 15px 10px;
+  padding: 25px;
   border-radius: 10px;
   border: none;
+  font-size: 16px;
 }
 
 .info-boxes {
@@ -530,14 +532,22 @@ input[type="submit"] {
   background-color: var(--light-gray);
   border-radius: 20px;
   padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 
   h3 {
     margin-top: 0;
   }
 
+  ul {
+    max-width: fit-content;
+  }
+
   li {
     list-style-type: disc;
     margin-left: 20px;
+    width: fit-content;
   }
 }
 
@@ -740,6 +750,13 @@ body.modo-oscuro .light-mode-button {
 /* Ancho para tablets */
 @media (max-width: 768px) {
   /* DARK MODE */
+  h2 {
+    font-size: 26px;
+  }
+
+  h3 {
+    font-size: 24px;
+  }
 
   p {
     font-size: 16px;
@@ -915,6 +932,10 @@ body.modo-oscuro .light-mode-button {
     button {
       width: 100%;
     }
+  }
+
+  .info-boxes .feature-card {
+    min-width: 100%;
   }
 
   .payment-methods {
