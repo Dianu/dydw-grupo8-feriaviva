@@ -624,19 +624,20 @@ footer {
   text-align: center;
 }
 
-body.modo-oscuro .footer-column ul li i {
-  color: var(--white);
-}
-
-body.modo-oscuro .footer-column ul li img.footer-icon {
-  filter: brightness(0) invert(1);
-}
-
 /********* MODO OSCURO *********/
 body.modo-oscuro,
 body.modo-oscuro .actividadades-card {
   background-color: #082628;
   color: #e9f4ef;
+}
+
+body.modo-oscuro h3,
+body.modo-oscuro h4 {
+  color: var(--white);
+}
+
+body.modo-oscuro .secondary-banner h3 {
+  color: var(--dark-green);
 }
 
 /* HEADER */
@@ -687,7 +688,16 @@ body.modo-oscuro .form input[type="submit"] {
 }
 
 body.modo-oscuro .rifa-form-section {
+  background-color: var(--dark-green);
+}
+
+body.modo-oscuro .rifa-form-section input[type="submit"] {
   background-color: #0e1a17;
+  color: var(--white);
+}
+
+body.modo-oscuro .rifa-form-section span {
+  color: var(--white);
 }
 
 /* CARDS y FEATURES */
