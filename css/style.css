@@ -449,6 +449,34 @@ footer {
   padding: 20px 0;
 }
 
+.footer-column h4 {
+  margin-bottom: 15px;
+}
+
+.footer-column ul li {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.footer-column ul li i,
+.footer-column ul li img.footer-icon {
+  font-size: 1.2rem;
+  color: var(--dark-green);
+  width: 20px;
+  height: 20px;
+  text-align: center;
+}
+
+body.modo-oscuro .footer-column ul li i {
+  color: var(--white);
+}
+
+body.modo-oscuro .footer-column ul li img.footer-icon {
+  filter: brightness(0) invert(1);
+}
+
 /********* MODO OSCURO *********/
 body.modo-oscuro,
 body.modo-oscuro .actividadades-card {
