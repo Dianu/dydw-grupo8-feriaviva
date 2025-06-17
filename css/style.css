@@ -50,6 +50,14 @@ a {
   color: var(--purple);
 }
 
+.orange-bg {
+  background-color: var(--orange);
+}
+
+.purple-bg {
+  background-color: var(--purple);
+}
+
 header,
 main {
   padding: 20px;
@@ -299,9 +307,9 @@ main {
 input[type="submit"] {
   background-color: var(--dark-green);
   color: var(--white);
-  font-weight: 600;
   border: none;
   padding: 12px 18px;
+  width: 100%;
   border-radius: 20px;
   cursor: pointer;
 
@@ -443,6 +451,84 @@ input[type="submit"] {
   }
 }
 
+/* ----- RIFA.HTML ----- */
+.cta-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+
+  gap: 10px;
+  width: 100%;
+
+  button {
+    width: 31.5%;
+  }
+}
+
+.info-panel {
+  padding: 15px 10px;
+  border-radius: 10px;
+  border: none;
+}
+
+.info-boxes {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+
+  .feature-card {
+    flex: 1;
+    min-width: 300px;
+  }
+}
+
+.feature-card {
+  background-color: var(--light-gray);
+  border-radius: 20px;
+  padding: 20px;
+
+  h3 {
+    margin-top: 0;
+  }
+
+  li {
+    list-style-type: disc;
+    margin-left: 20px;
+  }
+}
+
+.rifa-form-section {
+  background-color: var(--light-gray);
+  padding: 20px;
+  border-radius: 20px;
+  margin-top: 20px;
+  > div {
+    display: flex;
+    justify-content: space-evenly;
+  }
+
+  p {
+    color: var(--dark-green);
+    margin-bottom: 10px;
+  }
+
+  span {
+    margin-top: 10px;
+    display: block;
+    color: grey;
+  }
+}
+
+.payment-methods {
+  width: 500px;
+
+  img {
+    width: 100%;
+    object-fit: contain;
+    border-radius: 20px;
+  }
+}
+
 footer {
   background-color: var(--light-green);
   padding: 20px 20px 0px 20px;
@@ -539,19 +625,26 @@ body.modo-oscuro .form input[type="submit"] {
   }
 }
 
+body.modo-oscuro .rifa-form-section {
+  background-color: #0e1a17;
+}
+
 /* CARDS y FEATURES */
 body.modo-oscuro .card,
-body.modo-oscuro .actividad {
+body.modo-oscuro .actividad,
+body.modo-oscuro .feature-card {
   background-color: #156064;
   color: #e9f4ef;
   border-radius: 10px;
 }
 
-body.modo-oscuro .main-banner h2,
+body.modo-oscuro .banner.main-banner h2,
 body.modo-oscuro .main-banner p,
 body.modo-oscuro h2,
 body.modo-oscuro .card h3,
 body.modo-oscuro .actividadades-card h3,
+body.modo-oscuro .feature-card h3,
+body.modo-oscuro .payment-methods h3,
 body.modo-oscuro p,
 body.modo-oscuro label,
 body.modo-oscuro a {
@@ -567,7 +660,6 @@ body.modo-oscuro .banner h2 {
 body.modo-oscuro .dark-mode-button {
   display: none;
 }
-
 body.modo-oscuro .light-mode-button {
   display: inline-block;
   background-color: #fff;
@@ -584,6 +676,15 @@ body.modo-oscuro .light-mode-button {
   .galeria-destinos {
     grid-template-columns: 1fr 1fr 1fr;
   }
+
+  .rifa-form-section {
+    > div {
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 20px;
+    }
+  }
 }
 
 /* Ancho para tablets */
@@ -595,7 +696,6 @@ body.modo-oscuro .light-mode-button {
 
   body.modo-oscuro .navbar {
     background-color: #0e1a17;
-
     a {
       color: white;
     }
@@ -688,7 +788,6 @@ body.modo-oscuro .light-mode-button {
   .form {
     padding: 0;
   }
-
   .row {
     flex-direction: column;
     gap: 0;
@@ -745,8 +844,7 @@ body.modo-oscuro .light-mode-button {
     }
   }
 
-  /* RECORRIDO.HTML */
-
+  /* @media para RECORRIDO.HTML */
   .calendario {
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
   }
@@ -755,6 +853,21 @@ body.modo-oscuro .light-mode-button {
     width: 25%;
   }
 
+  /* @media para RIFAS.HTML */
+  .cta-buttons {
+    flex-direction: column;
+    align-items: center;
+
+    button {
+      width: 100%;
+    }
+  }
+
+  .payment-methods {
+    width: 80%;
+  }
+
+  /* FOOTER GRAL */
   .footer-container {
     grid-template-columns: 1fr;
     gap: 20px;
@@ -763,6 +876,7 @@ body.modo-oscuro .light-mode-button {
 
 @media (max-width: 480px) {
   .form,
+  .payment-methods,
   .contact-section h2,
   .contact-section p {
     width: 100%;

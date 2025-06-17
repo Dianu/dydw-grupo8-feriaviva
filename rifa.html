@@ -9,6 +9,8 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
     />
     <script defer src="./js/navbar_responsive.js"></script>
+    <script defer src="./js/modo.js"></script>
+    <script defer src="./js/rifa-form.js"></script>
     <title>Feria Viva | Rifa</title>
   </head>
   <body>
@@ -50,95 +52,101 @@
         <img src="./assets/images/Pink Green L.png" alt="Banner floral" />
         <h2>Rifas</h2>
       </section>
-      <div class="titulo-y-texto">
-        <h1>Participá, ayudá y ganá</h1>
-        <p class="intro">
-          Cada mes lanzamos una nueva rifa solidaria. Los premios están
-          vinculados a experiencias sustentables o productos de la feria: desde
-          kits ecológicos y cenas veganas, hasta talleres privados y escapadas
-          eco-friendly.
-        </p>
-      </div>
-      <div class="cta-buttons">
-        <button class="orange">Proyectos de reforestación</button>
-        <button class="purple">
-          Talleres comunitarios en barrios vulnerables
-        </button>
-        <button class="orange">Campañas de limpieza o reciclado</button>
-      </div>
-
-      <div class="titulo-y-texto">
-        <h2>Rifa Solidaria Mayo/ Junio 2025</h2>
-        <p class="intro">
-          Sumate a esta edición de nuestra rifa bimestral y ayudá a fortalecer
-          el trabajo de cooperativas que recuperan y transforman residuos en
-          recursos.
-        </p>
-      </div>
-      <div class="info-boxes">
-        <div class="info-box">
-          <h3>Premios</h3>
-          <ul>
-            <li>Kit eco de productos de la feria</li>
-            <li>Cena vegana para dos</li>
-          </ul>
+      <section>
+        <div class="titulo-y-texto">
+          <h2>Participá, ayudá y ganá</h2>
+          <p class="intro">
+            Cada mes lanzamos una nueva rifa solidaria. Los premios están
+            vinculados a experiencias sustentables o productos de la feria:
+            desde kits ecológicos y cenas veganas, hasta talleres privados y
+            escapadas eco-friendly. Todo lo recaudado se destina a causas
+            sociales o ambientales concretas, como:
+          </p>
         </div>
-        <div class="info-box">
-          <h3>Condiciones</h3>
-          <ul>
-            <li>Valor del número: $1.000</li>
-            <li>Sorteo: 1 de julio (En redes)</li>
-            <li>Válido solo en Buenos Aires</li>
-          </ul>
+        <div class="cta-buttons">
+          <button class="orange-bg info-panel">
+            Proyectos de reforestación
+          </button>
+          <button class="purple-bg info-panel">
+            Talleres comunitarios en barrios vulnerables
+          </button>
+          <button class="orange-bg info-panel">
+            Campañas de limpieza o reciclado
+          </button>
         </div>
-      </div>
-
-      <h2>Comprá tu número online</h2>
-      <div class="payment-methods">
-        <img
-          src="https://upload.wikimedia.org/wikipedia/commons/3/30/Mercado_Pago_logo.png"
-          alt="Mercado Pago"
-        />
+      </section>
+      <section>
+        <div class="titulo-y-texto">
+          <h2>Rifa Solidaria Mayo/ Junio 2025</h2>
+          <p class="intro">
+            Sumate a esta edición de nuestra rifa bimestral y ayudá a fortalecer
+            el trabajo de cooperativas que recuperan y transforman residuos en
+            recursos.
+          </p>
+        </div>
+        <div class="info-boxes">
+          <div class="feature-card">
+            <h3>Premios</h3>
+            <ul>
+              <li>Kit eco de productos de la feria</li>
+              <li>Cena vegana para dos</li>
+            </ul>
+          </div>
+          <div class="feature-card">
+            <h3>Condiciones</h3>
+            <ul>
+              <li>Valor del número: $1.000</li>
+              <li>Sorteo: 1 de julio (En redes)</li>
+              <li>Válido solo en Buenos Aires</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+      <section class="rifa-form-section">
+        <h2>Comprá tu número online</h2>
         <div>
-          <strong>Métodos de Pago</strong><br />
-          <img
-            src="https://seeklogo.com/images/V/visa-logo-6F4057663D-seeklogo.com.png"
-            alt="Visa"
-            height="30"
-          />
-          <img
-            src="https://seeklogo.com/images/M/mastercard-logo-48C5D3C797-seeklogo.com.png"
-            alt="Mastercard"
-            height="30"
-          />
-        </div>
-      </div>
+          <div class="payment-methods">
+            <h3>Métodos de Pago</h3>
+            <img
+              src="./assets/images/metodos_de_pago.jpg"
+              alt="Métodos de pago"
+            />
+          </div>
 
-      <form>
-        <div class="form-grid">
-          <input type="text" placeholder="Nombre" required />
-          <input type="text" placeholder="Apellido" required />
-          <input class="full-width" type="email" placeholder="Mail" required />
-          <input
-            class="full-width"
-            type="number"
-            placeholder="Cantidad de números"
-            required
-          />
+          <form class="form" id="form">
+            <div class="row">
+              <div class="field-group">
+                <label for="nombre">Nombre</label>
+                <input type="text" id="nombre" placeholder="Nombre" />
+              </div>
+              <div class="field-group">
+                <label for="apellido">Apellido</label>
+                <input type="text" id="apellido" placeholder="Apellido" />
+              </div>
+            </div>
+            <div class="field-group">
+              <label for="email">Email</label>
+              <input type="text" id="email" placeholder="Email" />
+            </div>
+            <div class="field-group">
+              <label for="cantidad_rifas">Cantidad de números</label>
+              <input type="number" id="cantidad_rifas" placeholder="Cantidad" />
+            </div>
+            <p><strong>TOTAL: $0</strong></p>
+            <input type="submit" value="Comenzar Proceso de Pago" />
+            <span
+              >*Los números se asignan de forma automática al finalizar la
+              compra</span
+            >
+          </form>
         </div>
-        <p><strong>TOTAL: $X.XXX</strong></p>
-        <button type="submit">Comenzar Proceso de Pago</button>
-        <small
-          >*Los números se asignan de forma automática al finalizar la
-          compra</small
-        >
-      </form>
+      </section>
     </main>
     <footer>
       <div class="footer-container">
         <div class="logo-container">
           <img src="./assets/images/logo.svg" alt="Site Logo" />
-          <span><strong>Feria</strong> Viva</span>
+          <span>Feria <span class="orange-text">Viva</span></span>
         </div>
         <div class="footer-column">
           <h4>Contacto</h4>
@@ -192,6 +200,47 @@
         </p>
       </div>
     </footer>
-    <script defer src="./js/modo.js"></script>
+
+    <!-- Modal de Error -->
+    <div id="modal-error" class="modal" style="display: none">
+      <div class="modal-content error">
+        <div class="modal-icon">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            height="48"
+            width="48"
+            fill="#f89b77"
+            viewBox="0 0 48 48"
+          >
+            <path
+              d="M24 4a20 20 0 1 0 .001 40.001A20 20 0 0 0 24 4Zm6.05 26.05-2.1 2.1L24 26.1l-3.95 3.95-2.1-2.1L21.9 24l-3.95-3.95 2.1-2.1L24 21.9l3.95-3.95 2.1 2.1L26.1 24l3.95 3.95Z"
+            />
+          </svg>
+        </div>
+        <div id="modal-error-text" class="modal-text"></div>
+        <button onclick="cerrarModal('modal-error')">Cerrar</button>
+      </div>
+    </div>
+
+    <!-- Modal de Éxito -->
+    <div id="modal-exito" class="modal" style="display: none">
+      <div class="modal-content success">
+        <div class="modal-icon">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            height="48"
+            width="48"
+            viewBox="0 0 48 48"
+            fill="#156064"
+          >
+            <path
+              d="M24 4a20 20 0 1 0 0 40 20 20 0 0 0 0-40Zm-2.25 26.3L14.7 23.25l2.1-2.1 4.95 4.95 9.45-9.45 2.1 2.1Z"
+            />
+          </svg>
+        </div>
+        <div id="modal-exito-text" class="modal-text"></div>
+        <button onclick="cerrarModal('modal-exito')">Cerrar</button>
+      </div>
+    </div>
   </body>
 </html>
