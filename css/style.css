@@ -839,3 +839,84 @@ textarea.error {
 .leaflet-popup-content b {
   color: var(--primary-color);
 }
+
+.faqs-container {
+  max-width: 800px;
+  margin: 40px auto;
+}
+
+.accordion-item {
+  border: 1px solid #e0e0e0;
+  margin-bottom: 10px;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.accordion-button {
+  width: 100%;
+  padding: 20px;
+  background: none;
+  border: none;
+  text-align: left;
+  font-weight: 500;
+  font-size: 20px;
+  color: var(--dark-green);
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  align-items: center;
+  transition: background-color 0.3s ease;
+}
+
+.accordion-button:hover {
+  background-color: var(--light-green);
+}
+
+.accordion-icon {
+  font-size: 20px;
+  font-weight: bold;
+  transition: transform 0.3s ease;
+}
+
+.accordion-content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease-out;
+  background-color: var(--white);
+}
+
+.accordion-content p {
+  padding: 10px 15px;
+  margin: 0;
+  color: #666;
+  line-height: 1.6;
+}
+
+.accordion-item.active .accordion-button {
+  background-color: var(--light-green);
+}
+
+body.modo-oscuro .accordion-item {
+  border-color: #444;
+}
+
+body.modo-oscuro .accordion-button {
+  color: var(--white);
+}
+
+body.modo-oscuro .accordion-button:hover {
+  background-color: var(--dark-green);
+}
+
+body.modo-oscuro .accordion-content {
+  background-color: #082628;
+}
+
+body.modo-oscuro .accordion-content p {
+  color: var(--white);
+}
+
+body.modo-oscuro .accordion-item.active .accordion-button {
+  background-color: var(--dark-green);
+}
