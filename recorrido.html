@@ -4,8 +4,17 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./css/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+    />
     <script defer src="./js/navbar_responsive.js"></script>
     <script defer src="./js/modo.js"></script>
+    <script
+      defer
+      src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+    ></script>
+    <script defer src="./js/mapa.js"></script>
     <title>Feria Viva | Recorrido</title>
   </head>
   <body>
@@ -211,10 +220,12 @@
             </div>
           </div>
         </section>
-
-        <div class="mapa-container">
-          <img src="./assets/images/Mapa.png" alt="Mapa de próximos destinos" />
-        </div>
+      </section>
+      <section class="mapa-container">
+        <div
+          id="mapa-feria"
+          style="height: 400px; width: 100%; margin: 20px 0"
+        ></div>
       </section>
     </main>
     <footer>

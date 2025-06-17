@@ -75,7 +75,7 @@ main {
     }
   }
 
-  >span {
+  > span {
     font-weight: 600;
     color: var(--dark-green);
     font-size: 1.2rem;
@@ -138,7 +138,7 @@ header nav ul {
   display: none;
 }
 
-body>hr {
+body > hr {
   margin: 0 20px;
   border: none;
   height: 0.5px;
@@ -363,7 +363,7 @@ input[type="submit"] {
   justify-content: space-around;
   gap: 20px;
 
-  >div {
+  > div {
     img {
       width: 100%;
       aspect-ratio: 1 / 1;
@@ -461,7 +461,7 @@ body.modo-oscuro header {
   background-color: var(--light-green);
 }
 
-body.modo-oscuro>hr {
+body.modo-oscuro > hr {
   display: none;
 }
 
@@ -552,7 +552,6 @@ body.modo-oscuro .light-mode-button {
 
 /* Ancho para tablets */
 @media (max-width: 768px) {
-
   /* DARK MODE */
   body.modo-oscuro .actividadades-card {
     background-color: var(--dark-green);
@@ -727,7 +726,6 @@ body.modo-oscuro .light-mode-button {
 }
 
 @media (max-width: 480px) {
-
   .form,
   .contact-section h2,
   .contact-section p {
@@ -749,7 +747,6 @@ body.modo-oscuro .light-mode-button {
   justify-content: center;
   z-index: 9999;
 }
-
 
 .modal-content {
   background-color: #fff;
@@ -813,4 +810,32 @@ textarea.error {
   border: 2px solid #f89b77;
   outline: none;
   background-color: #fff4f0;
+}
+
+.mapa-interactivo {
+  padding: 2rem;
+  text-align: center;
+}
+
+.mapa-interactivo p {
+  margin-bottom: 1.5rem;
+  color: var(--text-color);
+}
+
+#mapa-feria {
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.leaflet-popup-content-wrapper {
+  border-radius: 8px;
+}
+
+.leaflet-popup-content {
+  margin: 10px;
+  font-family: var(--font-family);
+}
+
+.leaflet-popup-content b {
+  color: var(--primary-color);
 }
