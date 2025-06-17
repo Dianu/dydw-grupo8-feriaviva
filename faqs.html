@@ -4,8 +4,13 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./css/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
     <script defer src="./js/navbar_responsive.js"></script>
     <script defer src="./js/modo.js"></script>
+    <script defer src="./js/accordion.js"></script>
     <title>Feria Viva | FAQS</title>
   </head>
   <body>
@@ -40,7 +45,127 @@
         <button class="hamburger" id="hamburger">&#9776;</button>
       </div>
     </header>
-    <main></main>
+    <main>
+      <section class="banner">
+        <img src="./assets/images/Pink Green L.png" alt="Banner floral" />
+        <h2>Preguntas Frecuentes</h2>
+      </section>
+      <section class="container py-5">
+        <div class="faqs-container">
+          <div class="accordion">
+            <div class="accordion-item">
+              <button class="accordion-button">
+                ¿En que ciudades se realiza la feria?
+                <i class="accordion-icon fa-solid fa-plus"></i>
+              </button>
+              <div class="accordion-content">
+                <p>
+                  Cada mes nos trasladamos a una ciudad distinta de la provincia
+                  de Buenos Aires. Podés ver el calendario completo en la
+                  sección "Nuestro Recorrido".
+                </p>
+              </div>
+            </div>
+
+            <div class="accordion-item">
+              <button class="accordion-button">
+                ¿Qué tipo de productos se venden en la feria?
+                <i class="accordion-icon fa-solid fa-plus"></i>
+              </button>
+              <div class="accordion-content">
+                <p>
+                  Vas a encontrar productos orgánicos, ecológicos, hechos a
+                  mano, reciclados, de segunda mano y tecnología sustentable.
+                  Todos los stands están comprometidos con el consumo
+                  responsable.
+                </p>
+              </div>
+            </div>
+
+            <div class="accordion-item">
+              <button class="accordion-button">
+                ¿Puedo participar como expositor?
+                <i class="accordion-icon fa-solid fa-plus"></i>
+              </button>
+              <div class="accordion-content">
+                <p>
+                  Sí. Si tenés un emprendimiento con enfoque sustentable, podés
+                  escribirnos a través del formulario de contacto.
+                </p>
+              </div>
+            </div>
+
+            <div class="accordion-item">
+              <button class="accordion-button">
+                ¿Que pasa si llueve?
+                <i class="accordion-icon fa-solid fa-plus"></i>
+              </button>
+              <div class="accordion-content">
+                <p>
+                  En caso de lluvia fuerte, las actividades al aire libre se
+                  reprograman o se trasladan a espacios cubiertos si es posible.
+                  Cualquier cambio se comunica por nuestras redes y sitio web.
+                </p>
+              </div>
+            </div>
+
+            <div class="accordion-item">
+              <button class="accordion-button">
+                ¿Puedo llevar a mi mascota?
+                <i class="accordion-icon fa-solid fa-plus"></i>
+              </button>
+              <div class="accordion-content">
+                <p>
+                  Sí, siempre que esté bajo supervisión y en espacios donde esté
+                  permitido por el predio.
+                </p>
+              </div>
+            </div>
+
+            <div class="accordion-item">
+              <button class="accordion-button">
+                ¿Cómo funciona la rifa solidaria?
+                <i class="accordion-icon fa-solid fa-plus"></i>
+              </button>
+              <div class="accordion-content">
+                <p>
+                  Cada mes lanzamos una rifa para recaudar fondos destinados a
+                  una causa ambiental o social. Los premios están relacionados
+                  con productos o experiencias de la feria.
+                </p>
+              </div>
+            </div>
+
+            <div class="accordion-item">
+              <button class="accordion-button">
+                ¿Dónde puedo comprar mi número para la rifa?
+                <i class="accordion-icon fa-solid fa-plus"></i>
+              </button>
+              <div class="accordion-content">
+                <p>
+                  Desde la sección "Venta de Rifas Online" podés ver la causa
+                  actual, los premios disponibles y comprar tus números de forma
+                  segura.
+                </p>
+              </div>
+            </div>
+
+            <div class="accordion-item">
+              <button class="accordion-button">
+                ¿Cuándo se anuncian los ganadores?
+                <i class="accordion-icon fa-solid fa-plus"></i>
+              </button>
+              <div class="accordion-content">
+                <p>
+                  Los resultados se publican en nuestras redes y web, y los
+                  ganadores también son contactados por correo electrónico.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
     <footer>
       <div class="footer-container">
         <div class="logo-container">
@@ -51,18 +176,18 @@
           <h4>Contacto</h4>
           <ul>
             <li>
-              <span class="icon-phone"></span
-              ><a href="https://wa.me/541130303030" target="_blank"
+              <i class="fa-solid fa-phone"></i>
+              <a href="https://wa.me/541130303030" target="_blank"
                 >+54 11 30303030</a
               >
             </li>
             <li>
-              <span class="icon-mail"></span
-              ><a href="mailto:feriaviva@mail.com.ar">feriaviva@mail.com.ar</a>
+              <i class="fa-solid fa-envelope"></i>
+              <a href="mailto:feriaviva@mail.com.ar">feriaviva@mail.com.ar</a>
             </li>
             <li>
-              <span class="icon-instagram"></span
-              ><a href="https://www.instagram.com/feriaviva.ok/" target="_blank"
+              <i class="fa-brands fa-instagram"></i>
+              <a href="https://www.instagram.com/feriaviva.ok/" target="_blank"
                 >@feriaviva.ok</a
               >
             </li>
@@ -73,16 +198,20 @@
           <h4>Sobre la Feria</h4>
           <ul>
             <li>
-              <span class="icon-activity"></span
-              ><a href="./actividades.html">Actividades</a>
+              <img
+                src="./assets/icons/Paint Palette.svg"
+                alt="Actividades"
+                class="footer-icon"
+              />
+              <a href="./actividades.html">Actividades</a>
             </li>
             <li>
-              <span class="icon-map"></span
-              ><a href="./recorrido.html"> Nuestro Recorrido</a>
+              <i class="fa-solid fa-map"></i>
+              <a href="./recorrido.html">Nuestro Recorrido</a>
             </li>
             <li>
-              <span class="icon-faq"></span
-              ><a href="./faqs.html">Preguntas Frecuentes</a>
+              <i class="fa-solid fa-circle-question"></i>
+              <a href="./faqs.html">Preguntas Frecuentes</a>
             </li>
           </ul>
         </div>

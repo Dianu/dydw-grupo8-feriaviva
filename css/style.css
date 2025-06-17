@@ -183,7 +183,7 @@ main {
     filter: brightness(0.7);
   }
 
-  h2,
+  h1,
   p {
     color: var(--white);
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
@@ -400,7 +400,6 @@ input[type="submit"] {
 
 .tarjeta-fecha {
   display: flex;
-
   border-radius: 12px;
   overflow: hidden;
 }
@@ -417,10 +416,8 @@ input[type="submit"] {
   background-color: var(--dark-green);
   color: var(--white);
   padding: 10px 20px;
-
-  span {
-    font-weight: 600;
-  }
+  min-width: 120px;
+  text-align: center;
 }
 
 .info-evento {
@@ -428,6 +425,17 @@ input[type="submit"] {
   background-color: var(--light-purple);
   color: var(--dark-green);
   padding: 10px 20px;
+  text-align: left;
+}
+
+.info-evento span:first-child {
+  font-weight: 600;
+  margin-bottom: 5px;
+}
+
+.info-evento span {
+  display: block;
+  text-align: left;
 }
 
 .mapa-container {
@@ -533,6 +541,34 @@ footer {
 
 .footer-bottom {
   padding: 20px 0;
+}
+
+.footer-column h4 {
+  margin-bottom: 15px;
+}
+
+.footer-column ul li {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.footer-column ul li i,
+.footer-column ul li img.footer-icon {
+  font-size: 1.2rem;
+  color: var(--dark-green);
+  width: 20px;
+  height: 20px;
+  text-align: center;
+}
+
+body.modo-oscuro .footer-column ul li i {
+  color: var(--white);
+}
+
+body.modo-oscuro .footer-column ul li img.footer-icon {
+  filter: brightness(0) invert(1);
 }
 
 /********* MODO OSCURO *********/
@@ -924,4 +960,113 @@ textarea.error {
   border: 2px solid #f89b77;
   outline: none;
   background-color: #fff4f0;
+}
+
+.mapa-interactivo {
+  padding: 2rem;
+  text-align: center;
+}
+
+.mapa-interactivo p {
+  margin-bottom: 1.5rem;
+  color: var(--text-color);
+}
+
+#mapa-feria {
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.leaflet-popup-content-wrapper {
+  border-radius: 8px;
+}
+
+.leaflet-popup-content {
+  margin: 10px;
+  font-family: var(--font-family);
+}
+
+.leaflet-popup-content b {
+  color: var(--primary-color);
+}
+
+.faqs-container {
+  max-width: 800px;
+  margin: 40px auto;
+}
+
+.accordion-item {
+  border: 1px solid #e0e0e0;
+  margin-bottom: 10px;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.accordion-button {
+  width: 100%;
+  padding: 20px;
+  background: none;
+  border: none;
+  text-align: left;
+  font-weight: 500;
+  font-size: 20px;
+  color: var(--dark-green);
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  align-items: center;
+  transition: background-color 0.3s ease;
+}
+
+.accordion-button:hover {
+  background-color: var(--light-green);
+}
+
+.accordion-icon {
+  font-size: 20px;
+  font-weight: bold;
+  transition: transform 0.3s ease;
+}
+
+.accordion-content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease-out;
+  background-color: var(--white);
+}
+
+.accordion-content p {
+  padding: 10px 15px;
+  margin: 0;
+  color: #666;
+  line-height: 1.6;
+}
+
+.accordion-item.active .accordion-button {
+  background-color: var(--light-green);
+}
+
+body.modo-oscuro .accordion-item {
+  border-color: #444;
+}
+
+body.modo-oscuro .accordion-button {
+  color: var(--white);
+}
+
+body.modo-oscuro .accordion-button:hover {
+  background-color: var(--dark-green);
+}
+
+body.modo-oscuro .accordion-content {
+  background-color: #082628;
+}
+
+body.modo-oscuro .accordion-content p {
+  color: var(--white);
+}
+
+body.modo-oscuro .accordion-item.active .accordion-button {
+  background-color: var(--dark-green);
 }
