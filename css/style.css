@@ -265,7 +265,7 @@ main {
 .cards {
   padding: 20px 0;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 20px;
 
   article {
@@ -750,6 +750,10 @@ body.modo-oscuro .light-mode-button {
 /* Ancho para tablets */
 @media (max-width: 768px) {
   /* DARK MODE */
+
+  main {
+    padding: 20px;
+  }
   h2 {
     font-size: 26px;
   }
@@ -760,6 +764,12 @@ body.modo-oscuro .light-mode-button {
 
   p {
     font-size: 16px;
+  }
+
+  .main-banner {
+    p {
+      font-size: 18px;
+    }
   }
 
   body.modo-oscuro .actividadades-card {
